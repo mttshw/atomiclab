@@ -1,3 +1,3 @@
-#website for AtomicLab
+# website for AtomicLab
 
 built with Jekyll
