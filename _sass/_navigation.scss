@@ -1,0 +1,12 @@
+.main-navigation {
+    &__inner {
+        list-style: none;
+    }
+    &__item {
+        display: inline-block;
+
+        &__link {
+            text-decoration: none;
+        }
+    }
+}
