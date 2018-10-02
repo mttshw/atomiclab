@@ -4,9 +4,25 @@
     }
     &__item {
         display: inline-block;
+        margin-left: 2rem;
 
         &__link {
             text-decoration: none;
+            color: #fff;
+            display: block;
+            position: relative;
+
+            &:hover {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 100%;
+                    width: 100%;
+                    display: block;
+                    border-bottom: 3px solid #000;
+                }
+            }
         }
     }
 }

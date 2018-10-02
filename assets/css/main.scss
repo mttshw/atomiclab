@@ -3,10 +3,10 @@
 # only Main files contain this front matter, not partials.
 ---
 
+@import "normalize";
 @import "base";
+@import "buttons";
 @import "navigation";
+@import "siteheader";
+@import "hero-banner";
 
-.content {
-  width: 45rem;
-  margin: 0 auto;
-}

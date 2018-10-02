@@ -4,6 +4,8 @@
 
 layout: page
 title: Pay Monthly Websites. Designed, built, delivered and hosted
+bannertext: Designed.<br> Built.<br> Delivered.<br> Hosted.
+plansfrom: Websites from <span>£39.99 per month</span>
 ---
 
-<h1>Designed. Built. Delivered. Hosted.</h1>
+{% include hero-banner.html %}
