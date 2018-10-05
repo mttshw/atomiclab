@@ -1,0 +1,62 @@
+.why-choose-us {
+    padding: 4rem 0;
+    position: relative;
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    &__heading {
+        font-size: 2.6rem;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 3rem;
+        color: #000;
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: 17.6% 17.6% 17.6% 17.6% 17.6%;
+        grid-template-rows: auto;
+        grid-column-gap: 3%;
+        grid-row-gap: 20px;
+
+        @include breakpoint(968px) {
+            grid-template-columns: 31% 31% 31%;
+        }
+        @include breakpoint(768px) {
+            grid-template-columns: 100%;
+        }
+    } 
+    &__item {
+        text-align: center;
+        color: #666;
+
+        @include breakpoint(768px) {
+            text-align: left;
+            position: relative;
+            padding-left: 120px;
+
+            .icon {
+                position: absolute;
+                left: 0;
+                top: 20px;
+            }
+        }
+
+        @include breakpoint(768px) {
+            padding-left: 70px;
+
+            .icon {
+                width: 50px;
+                height: 50px;
+                border-width: 5px;
+                padding: 10px;
+            }
+        }
+    }
+
+    &__cta {
+        padding: 20px 0;
+        text-align: center;
+    }
+}

@@ -1,14 +1,34 @@
 .hero-banner {
     position: relative;
+    z-index: 1;
+    max-height: 1100px;
+    overflow: hidden;
+
+    @include breakpoint(960px) {
+        max-height: 880px; 
+    }
+
+    @include breakpoint(690px) {
+        max-height: 680px;
+    }
 
     .container {
         display: flex;
         width: 100%;
+        height: 100%;
+        align-items: flex-end;
+
+        @include breakpoint(960px) {
+            flex-direction: column;
+        }
     }
     &__image {
         display: block;
         width: 100%;
         z-index: 1;
+        position: relative;
+        height: 100%;
+        object-fit: cover;
     }
     &__text-container {
         width: 100%;
@@ -16,21 +36,53 @@
         position: absolute;
         top: 0;
         left: 0;
-    }
+        padding-top: 120px;
+        height: 100%;
+    } 
 
     &__heading {
         font-size: 5rem;
         width: 50%;
         z-index: 2;
         color: #fff;
+        margin-bottom: 10vw;
+
+        @include breakpoint(960px) {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+        @include breakpoint(690px) {
+            font-size: 3rem;
+        }
     }
     &__text {
         width: 100%;
         margin-left: 5vw;
+        margin-bottom: 10vw;
+        max-width: 540px;
+        padding-bottom: 1.5rem;
+
+        @include breakpoint(960px) {
+            margin: 0 auto;
+            text-align: center;
+        }
 
         p {
-            color: #666;
+            color: #fff;
             display: block;
+            line-height: 1.5;
+            font-size: 1.6rem;
+            font-weight: 400;
+
+            @include breakpoint(1120px) {
+                font-size: 1.3rem;
+                line-height: 1.7;
+                margin-bottom: 1.8rem;
+            }
+            @include breakpoint(960px) {
+                text-align: center;
+            }
 
             span {
                 display: block;

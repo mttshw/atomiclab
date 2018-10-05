@@ -1,10 +1,73 @@
 .main-navigation {
+    display: block;
+    @include breakpoint(960px) {
+        position: fixed;
+        height: 100%;
+        width: 200px;
+        background: #333;
+        left: 100%;
+        top: 0;
+    }
+
+    &__toggle {
+        display: none;
+
+        @include breakpoint(960px) {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border: 0;
+            background: none;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+
+            span,
+            &:before,
+            &:after {
+                content: ' ';
+                font-size: 1px;
+                display: block;
+                height: 5px;
+                width: 100%;
+                background: #fff;
+                color: #fff;
+                margin-bottom: 5px;
+                transition: all 0.3s;
+                opacity: 1;
+            }
+
+            &.active {
+                span {
+                    opacity: 0;
+                }
+                &:before {
+                    transform: rotate(45deg) translate(14px,12px);
+                    margin-top: -10px;
+                }
+                &:after {
+                    transform: rotate(-45deg) translate(2px,0px);
+                }
+            }
+        }
+    }
+
     &__inner {
         list-style: none;
+
+        @include breakpoint(960px) {
+            padding: 3rem 0;
+            margin: 0;
+        }
     }
     &__item {
         display: inline-block;
         margin-left: 2rem;
+
+        @include breakpoint(960px) {
+            display: block;
+            padding: 1rem 0;
+        }
 
         &__link {
             text-decoration: none;
@@ -12,7 +75,7 @@
             display: block;
             position: relative;
 
-            &:hover {
+            &:hover { 
                 &:after {
                     content: '';
                     position: absolute;
@@ -20,9 +83,24 @@
                     top: 100%;
                     width: 100%;
                     display: block;
-                    border-bottom: 3px solid #000;
+                    border-bottom: 3px solid #fff;
+
+                    @include breakpoint(960px) {
+                        content: none;
+                    }
                 }
             }
         }
+    }
+}
+.nav-inactive {
+    @include breakpoint(960px) {
+        transform: translateX(0);
+        transition: transform 0.3s;    
+    }
+}
+.nav-active {
+    @include breakpoint(960px) {
+        transform: translateX(-200px);                    
     }
 }

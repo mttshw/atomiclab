@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+// mixins
+
+@mixin breakpoint($point) {
+    @media (max-width: $point) { @content ; }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+    position: relative;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
 }
@@ -7,4 +22,24 @@ body {
 .container {
     margin: 0 auto;
     max-width: 1224px;
+    padding: 0 50px;
+
+    @include breakpoint(1023px) {
+        padding: 0 30px;
+    }
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 50%;
+    border: 10px solid #ED7B00;
+
+    svg {
+        width: 100%;
+    }
 }

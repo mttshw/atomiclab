@@ -1,0 +1,50 @@
+.how-it-works {
+    background-color: #ebf2f8;
+    background-image: repeating-linear-gradient(120deg, rgba(#d9e5ed, 1), rgba(#d9e5ed, 1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(#d9e5ed, 1), rgba(#d9e5ed, 1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(#d9e5ed,.5) 25%, transparent 25%, transparent 75%, rgba(#d9e5ed,.5) 75%, rgba(#d9e5ed,.5)), linear-gradient(120deg, rgba(#d9e5ed,.5) 25%, transparent 25%, transparent 75%, rgba(#d9e5ed,.5) 75%, rgba(#d9e5ed,.5));
+    background-size: 70px 120px;
+    padding: 4rem 0;
+
+    &__heading {
+        font-size: 2.6rem;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+    &__inner {
+        display: flex;
+        width: 100%;
+
+        @include breakpoint(768px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__reason {
+        text-align: center;
+        width: 25%;
+        padding: 30px 20px 20px;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin: 0 1px;
+        background: rgba(white, 0.5);
+
+        @include breakpoint(768px) {
+            width: calc(50% - 2px);
+            margin-bottom: 1px;
+            font-size: 1rem;
+        }
+        @include breakpoint(450px) {
+            font-size: 0.8rem;
+
+            .icon {
+                width: 50px;
+                height: 50px;
+                border-width: 5px;
+                padding: 9px;
+            }
+        }
+
+        p {
+            color: #666;
+        }
+    }
+}

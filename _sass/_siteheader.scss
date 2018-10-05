@@ -1,9 +1,17 @@
 .siteheader {
-    position: absolute;
-    top: 0;
-    left: 0;
+    background: #6C696B;
     width: 100%;
     z-index: 9999;
+    padding: 3px 0 0;
+
+    .homepage & {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: none;
+        padding: 20px 0;
+    }
+
     .container {
         display: flex;
         flex-wrap: nowrap;
